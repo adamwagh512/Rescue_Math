@@ -1,5 +1,7 @@
 // Importing React and useState hook from react library
 import React, { useState } from 'react';
+import 'katex/dist/katex.min.css';
+import katex from 'katex';
 
 // Importing Michroma font from the Google Fonts package
 import { Michroma } from "next/font/google";
@@ -37,10 +39,22 @@ function App() {
     return kg * 2.2046;
   };
 
+  
+  
   // Calculating the converted weight based on the unit
   const convertedWeight = unit === 'lbs' ? convertToKg(weight) : convertToLbs(weight);
+  console.log(convertedWeight)
+  
+// Setting up the Katex equations for display
+// This will convert from kg to lbs
+  const kg2lb = `${weight}kg * 2.2lbs = ${convertedWeight.toFixed(2)} lbs`
+  const convert2lb = katex.renderToString(kg2lb)
+//   This will convert from lbs to kg.
+  const lb2kg = `\\frac{${weight}kg}{2.2lbs}\\ = ${convertedWeight.toFixed(2)}kg(s)`;
+  const convert2kg = katex.renderToString(lb2kg);
 
-  // Returning the JSX code for the App component
+ 
+
   return (
     <div className='bg-black text-white h-screen'>
 
@@ -51,9 +65,10 @@ function App() {
         <p className='pt-10 text-xl'>Description: </p>
         <p className='py-5'>
           This tool will help you to convert a patient's weight between pounds(lbs) and kilograms(kgs).
-          The math is not shown on this equation because the math is simple. 1 kilogram is 2.2 pounds
+          Please input the patient's weight and the weight unit. The conversion will happen automatically.
         </p>
-
+        {/* MathJax equation for weight conversion */}
+       
         {/* Input field for weight */}
         <div className='w-full pt-5 text-center'>
           <label className='text-xl'>
@@ -74,7 +89,13 @@ function App() {
 
         {/* Displaying the converted weight */}
         <p>{weight} {unit} is {convertedWeight.toFixed(2)} {unit === 'lbs' ? 'kg' : 'lbs'}</p>
+        <p className='py-5'>Equation : </p>
 
+        {unit === 'lbs' ? (
+            <span dangerouslySetInnerHTML={{__html: convert2kg}}></span>
+            ) : <div id='convertfromlb' dangerouslySetInnerHTML={{__html: convert2lb}}></div>}
+
+               
         {/* Button to return to the menu */}
         <div className={michroma.className}>
           <div className='flex justify-center'>

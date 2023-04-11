@@ -8,6 +8,7 @@ const michroma = Michroma ({
     subsets: ['latin']
 })
 
+
 const menu = () => {
   return (
     <div className='bg-black h-screen text-white uppercase'>
@@ -17,13 +18,13 @@ const menu = () => {
         <div className={michroma.className}>
             <div className='flex flex-col justify-center items-center'>
                         <a href="/weight"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight Conversion</button></a>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Fluid Administration</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Medication Bolus</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Drip Medication</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Parkland Burn Formula</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight-Based IV Bolus</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight-Based IV Drip</button>
-                        <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight Conversion</button>
+                        <a href="/fluidBolus"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Fluid Administration</button></a>
+                        <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Medication Bolus</button>
+                        <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Drip Medication</button>
+                        <a href="/Parkland"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Parkland Burn Formula</button></a>
+                        <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight-Based Med Bolus</button>
+                        <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight-Based IV Drip</button>
+                        <a href="/Homepage"><button className='bg-red-800 rounded-lg p-5 mt-10 w-[75vw]'>Return to Home</button></a>
                     
             </div>
         </div>

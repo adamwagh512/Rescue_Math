@@ -19,7 +19,7 @@ const menu = () => {
             <div className='flex flex-col justify-center items-center'>
                         <a href="/weight"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight Conversion</button></a>
                         <a href="/fluidBolus"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Fluid Administration</button></a>
-                        <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Medication Bolus</button>
+                        <a href="/bolus"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Medication Bolus</button></a>
                         <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>IV Drip Medication</button>
                         <a href="/Parkland"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Parkland Burn Formula</button></a>
                         <button className='bg-gray-800 rounded-lg p-5 mt-10 w-[75vw]'>Weight-Based Med Bolus</button>

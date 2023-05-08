@@ -11,7 +11,7 @@ weight: "400",
 subsets: ["latin"],
 });
 
-export const bolus = () => {
+export const medDrip = () => {
 // Setting state values
 const [desiredUnit, SetDesiredUnit] = useState('mg')
 const HandleDesiredUnitChange = (event) => {
@@ -38,6 +38,12 @@ const [fluid, setFluid] = useState('')
 const handleFluidChange = (event) => {
     setFluid(event.target.value)
 }
+
+const [time, setTime] = useState('')
+const handleTimeChange = (event) => {
+    setTime(event.target.value)
+}
+
 const [clicked, setClicked] = useState(false);
   function calculate(event) {
     setClicked(true);
@@ -70,6 +76,7 @@ var answer = ''
     SetDesiredValue("");
     SetGivenValue("");
     setFluid("");
+    setTime("")
   }
 
 // What gets rendered
@@ -77,11 +84,11 @@ var answer = ''
     <div className="h-screen bg-black text-white">
       <div className="h-fill bg-black">
         <div className={michroma.className}>
-          <p className="text-2xl text-center">Medication Bolus</p>
+          <p className="text-2xl text-center">Medication Drip</p>
           <p className="py-5">Description:</p>
           <p>
             This page is useful for telling you how much volume (mLs) to
-            administer in order to deliver the desired doseage of medication
+            administer and what drip rate (gtts/min) to use in order to deliver the desired doseage of medication. This section contains an optional weight based function.
           </p>
           <div>
             <div className="py-5">
@@ -110,10 +117,10 @@ var answer = ''
         </div>
         <div className="py-5">
           <label htmlFor="volume" className={michroma.className}>
-            Given Dose :
+            Given  Dose :
           </label>
           <input
-            className="mx-7 text-black"
+            className="mx-4 text-black"
             type="number"
             id="givenValue"
             name="givenValue"
@@ -170,4 +177,4 @@ var answer = ''
     </div>
   );
 };
-export default bolus;
+export default medDrip;

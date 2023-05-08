@@ -87,40 +87,46 @@ const Parkland = () => {
           <label htmlFor="volume" className={michroma.className}>
             IV set (gtts/ml):
           </label>
+          <div>
           <input
-            className="mx-1 text-black"
+            className="text-black"
             type="number"
             id="dripSet"
             name="dripSet"
             value={dripSet}
             onChange={handleDripChange}
           />
+          </div>
         </div>
         <div className="py-5">
           <label htmlFor="volume" className={michroma.className}>
             Weight (kg):
           </label>
+          <div>
           <input
-            className="mx-10 text-black"
+            className="text-black"
             type="number"
             id="weight"
             name="weight"
             value={weight}
             onChange={handleWeightChange}
           />
+          </div>
         </div>
         <div className="py-5">
           <label htmlFor="volume" className={michroma.className}>
             TBSA Burned:
           </label>
+          <div>
           <input
-            className="mx-3 text-black"
+            className="text-black"
             type="number"
             id="burned"
             name="burned"
             value={burned}
             onChange={handleBurnedChange}
           />
+          </div>
         </div>
       
       <div>

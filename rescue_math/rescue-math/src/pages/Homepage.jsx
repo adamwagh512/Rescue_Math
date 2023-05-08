@@ -17,6 +17,7 @@ const michroma = Michroma ({
 const Homepage = () => {
   return (
     <div className='bg-black h-screen text-white'>
+        <div className='bg-black h-max'>
         <div className='w-full h-[50%]'>
             <video className='h-[50vh] w-[100vw] object-fill' autoPlay loop muted playsInline> 
                 <source src={emsvid} type='video/mp4' />
@@ -35,6 +36,7 @@ const Homepage = () => {
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded"> Get Started </button>
                 </a>
             </div>
+        </div>
         </div>
     </div>
   )

@@ -57,6 +57,7 @@ function App() {
 
   return (
     <div className='bg-black text-white h-screen'>
+      <div className='bg-black h-max'>
 
       {/* Rendering the Michroma font */}
       <div className={michroma.className}>
@@ -103,6 +104,7 @@ function App() {
           </div>
         </div>
 
+      </div>
       </div>
     </div>
   );

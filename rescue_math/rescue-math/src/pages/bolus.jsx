@@ -75,7 +75,7 @@ var answer = ''
 // What gets rendered
   return (
     <div className="h-screen bg-black text-white">
-      <div className="h-fill bg-black">
+      <div className="h-max bg-black">
         <div className={michroma.className}>
           <p className="text-2xl text-center">Medication Bolus</p>
           <p className="py-5">Description:</p>
@@ -88,14 +88,16 @@ var answer = ''
           <label htmlFor="volume" className={michroma.className}>
             Desired Dose :
           </label>
+          <div>
           <input
-            className="mx-1 text-black"
+            className="mx- text-black"
             type="number"
             id="desiredValue"
             name="desiredValue"
             value={desiredValue}
             onChange={HandleDesiredValueChange}
           />
+          </div>
         </div>
         <div className='text-center text-xl'>
           <label className='p-3'>
@@ -112,14 +114,16 @@ var answer = ''
           <label htmlFor="volume" className={michroma.className}>
             Given Dose :
           </label>
+          <div>
           <input
-            className="mx-7 text-black"
+            className="text-black"
             type="number"
             id="givenValue"
             name="givenValue"
             value={givenValue}
             onChange={HandleGivenValueChange}
           />
+          </div>
         </div>
         <div className='text-center text-xl'>
           <label className='p-3'>
@@ -134,6 +138,7 @@ var answer = ''
           <label htmlFor="volume" className={michroma.className}>
             Given Fluid(ml) :
           </label>
+          <div>
           <input
             className=" text-black"
             type="number"
@@ -142,8 +147,9 @@ var answer = ''
             value={fluid}
             onChange={handleFluidChange}
           />
+          </div>
         </div>
-        { fluid && desiredValue && givenValue && clicked == true ? (<div className='text-xl py-10' id='test' dangerouslySetInnerHTML={{__html:renderMedBolusEquation}}></div>) : ''}
+        { fluid && desiredValue && givenValue && clicked == true ? (<div className='text-md py-10' id='test' dangerouslySetInnerHTML={{__html:renderMedBolusEquation}}></div>) : ''}
           </div>
         </div>
          <div className={michroma.className}>

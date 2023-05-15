@@ -11,7 +11,7 @@ weight: "400",
 subsets: ["latin"],
 });
 
-export const bolus = () => {
+const Bolus = () => {
 // Setting state values
 const [desiredUnit, SetDesiredUnit] = useState('mg')
 const HandleDesiredUnitChange = (event) => {
@@ -176,4 +176,4 @@ var answer = ''
     </div>
   );
 };
-export default bolus;
+export default Bolus;

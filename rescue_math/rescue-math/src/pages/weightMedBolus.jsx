@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "katex/dist/katex.min.css";
 import katex from "katex";
 import { Michroma } from "next/font/google";
+import Link from "next/link";
 
 // Declaring functions so we can use the Michroma font
 
@@ -11,7 +12,7 @@ weight: "400",
 subsets: ["latin"],
 });
 
-export const bolus = () => {
+const Bolus = () => {
 // Setting state values
 const [desiredUnit, SetDesiredUnit] = useState('mg')
 const HandleDesiredUnitChange = (event) => {
@@ -102,7 +103,7 @@ var answer = ''
           <p className="py-5">Description:</p>
           <p>
             This page is useful for telling you how much volume (mLs) to
-            administer in order to deliver the desired doseage of medication based on a patient's weight.
+            administer in order to deliver the desired doseage of medication based on a patients weight.
           </p>
           <div>
             <div className="py-5">
@@ -195,7 +196,7 @@ var answer = ''
           </div>
         </div>
         { weightValue && clicked ? (<div className='my-5 text-sm' ><p>The total dose is {totaldose} {desiredUnit}.</p></div>): '' }
-        { weightValue && weightUnit == 'lbs'  && clicked ? (<div className='my-5 text-sm' ><p>The patient's weight was converted to {convertedWeight} kgs.</p></div>): '' }
+        { weightValue && weightUnit == 'lbs'  && clicked ? (<div className='my-5 text-sm' ><p>The patients weight was converted to {convertedWeight} kgs.</p></div>): '' }
         { fluid && desiredValue && givenValue && clicked == true ? (<div className='text-sm my-5' id='test' dangerouslySetInnerHTML={{__html:renderMedBolusEquation}}></div>) : ''}
           </div>
         </div>
@@ -215,11 +216,12 @@ var answer = ''
             Reset
           </button>
         )}
-        <a href="/menu"><button className="bg-blue-800 rounded-lg p-5 mt-10 w-[100%]">
+        <Link href="/menu"><button className="bg-blue-800 rounded-lg p-5 mt-10 w-[100%]">
           Return to Menu
-        </button></a>
+        </button></Link>
       </div>
       </div>
     </div>
   );
 };
+export default Bolus;

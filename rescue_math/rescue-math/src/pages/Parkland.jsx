@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "katex/dist/katex.min.css";
 import katex from "katex";
 import { Michroma } from "next/font/google";
+import Link from 'next/link'
 
 // Declaring functions so we can use the Michroma font
 const michroma = Michroma({
@@ -69,7 +70,7 @@ const Parkland = () => {
             the management of severe burn patients. The Parkland formula is the
             most widely used resuscitation protocol that aids in calculating
             initial fluid requirements for these patients. This equation takes
-            in the patient's weight, burned surface area (BSA) and the drip set
+            in the patients weight, burned surface area (BSA) and the drip set
             to calculate the volume and drip set settings needed to deliver the
             appropriate amount of fluid. For help determining burned area,
             please click{" "}
@@ -183,9 +184,9 @@ const Parkland = () => {
             Reset
           </button>
         )}
-        <a href="/menu"><button className="bg-blue-800 rounded-lg p-5 mt-10 w-[100%]">
+        <Link href="/menu"><button className="bg-blue-800 rounded-lg p-5 mt-10 w-[100%]">
           Return to Menu
-        </button></a>
+        </button></Link>
       </div>
       </div>
     </div>

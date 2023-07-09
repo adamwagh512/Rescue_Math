@@ -223,4 +223,3 @@ var answer = ''
     </div>
   );
 };
-export default bolus;

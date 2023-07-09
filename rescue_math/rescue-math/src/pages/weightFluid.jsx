@@ -5,6 +5,7 @@ import 'katex/dist/katex.min.css';
 import katex from 'katex';
 // Importing Michroma font from the Google Fonts package
 import { Michroma } from "next/font/google";
+import Link from 'next/link';
 
 // Declaring functions so we can use the Michroma font
 const michroma = Michroma({
@@ -12,7 +13,7 @@ const michroma = Michroma({
   subsets: ['latin']
 });
 
-function weightFluid() {
+const WeightFluid = () => {
     // Setting state values
     const [volume, setVolume] = useState('');
     const [time, setTime] = useState('')
@@ -82,7 +83,7 @@ function weightFluid() {
             <div className='bg-black h-max'>
             <p className='text-4xl text-center'>Weight Based Fluid Bolus</p>
             <p className='py-5'>Description:</p>
-            <p>The Weight Based Fluid Bolus section takes in the volume of fluid to be given per kg, the patient's weight and the time over which it is to be given and the drip set used (in gtts/ml). This equation returns an answer in drops per minute (gtts/min) </p>
+            <p>The Weight Based Fluid Bolus section takes in the volume of fluid to be given per kg, the patients weight and the time over which it is to be given and the drip set used (in gtts/ml). This equation returns an answer in drops per minute (gtts/min) </p>
 
 
             {/* This segment controls the volume input field */}
@@ -163,7 +164,7 @@ function weightFluid() {
             <div className='flex-col justify-center'>
             {clicked === false ? ( <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={calculate}>Calculate</button>) : <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={clearAll}>Reset</button>}
             {/* <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={calculate}>Calculate</button> */}
-                <a href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]'>Return to Menu</button></a>
+                <Link href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]'>Return to Menu</button></Link>
             </div>
         </div>
         </div>
@@ -171,4 +172,4 @@ function weightFluid() {
   )
 }
 
-export default weightFluid
+export default WeightFluid

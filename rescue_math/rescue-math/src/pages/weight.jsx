@@ -65,8 +65,8 @@ function App() {
 
         <p className='pt-10 text-xl'>Description: </p>
         <p className='py-5'>
-          This tool will help you to convert a patient's weight between pounds(lbs) and kilograms(kgs).
-          Please input the patient's weight and the weight unit. The conversion will happen automatically.
+          This tool will help you to convert a patients weight between pounds(lbs) and kilograms(kgs).
+          Please input the patients weight and the weight unit. The conversion will happen automatically.
         </p>
         {/* MathJax equation for weight conversion */}
        

@@ -12,7 +12,7 @@ const michroma = Michroma({
   subsets: ['latin']
 });
 
-function fluidBolus() {
+const fluidBolus = () => {
     // Setting state values
     const [volume, setVolume] = useState('');
     const [time, setTime] = useState('')

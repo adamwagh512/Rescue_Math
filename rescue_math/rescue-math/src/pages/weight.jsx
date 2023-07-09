@@ -5,6 +5,7 @@ import katex from 'katex';
 
 // Importing Michroma font from the Google Fonts package
 import { Michroma } from "next/font/google";
+import Link from 'next/link';
 
 // Declaring functions so we can use the Michroma font
 const michroma = Michroma({
@@ -100,7 +101,7 @@ function App() {
         {/* Button to return to the menu */}
         <div className={michroma.className}>
           <div className='flex justify-center'>
-            <a href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Return to Menu</button></a>
+            <Link href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[75vw]'>Return to Menu</button></Link>
           </div>
         </div>
 

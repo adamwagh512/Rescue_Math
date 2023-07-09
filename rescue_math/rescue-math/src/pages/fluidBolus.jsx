@@ -5,6 +5,7 @@ import 'katex/dist/katex.min.css';
 import katex from 'katex';
 // Importing Michroma font from the Google Fonts package
 import { Michroma } from "next/font/google";
+import Link from 'next/link'
 
 // Declaring functions so we can use the Michroma font
 const michroma = Michroma({
@@ -12,7 +13,7 @@ const michroma = Michroma({
   subsets: ['latin']
 });
 
-const fluidBolus = () => {
+const FluidBolus = () => {
     // Setting state values
     const [volume, setVolume] = useState('');
     const [time, setTime] = useState('')
@@ -112,7 +113,7 @@ const fluidBolus = () => {
             <div className='flex-col justify-center'>
             {clicked === false ? ( <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={calculate}>Calculate</button>) : <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={clearAll}>Reset</button>}
             {/* <button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]' onClick={calculate}>Calculate</button> */}
-                <a href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]'>Return to Menu</button></a>
+                <Link href="/menu"><button className='bg-blue-800 rounded-lg p-5 mt-10 w-[100%]'>Return to Menu</button></Link>
             </div>
         </div>
         </div>
@@ -120,4 +121,4 @@ const fluidBolus = () => {
   )
 }
 
-export default fluidBolus
+export default FluidBolus;

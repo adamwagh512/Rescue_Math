@@ -11,7 +11,7 @@ weight: "400",
 subsets: ["latin"],
 });
 
-export const medDrip = () => {
+const MedDrip = () => {
 // Setting state values
 const [desiredUnit, SetDesiredUnit] = useState('mg')
 const HandleDesiredUnitChange = (event) => {
@@ -208,4 +208,4 @@ var answer = ''
     </div>
   );
 };
-export default medDrip;
+export default MedDrip;
